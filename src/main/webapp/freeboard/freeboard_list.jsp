@@ -109,8 +109,8 @@
   sql = sql + " masterid desc, replaynum, step, id" ;
   rs = st.executeQuery(sql);
   
-  out.println(sql);
-  if (true) return;   // 프로그램 종료 
+//  out.println(sql);
+//  if (true) return;   // 프로그램 종료 
 
   if (!(rs.next()))  {
    out.println("게시판에 올린 글이 없습니다");

@@ -19,3 +19,23 @@ create table freeboard (
     
  -- masterid  : 글의 답변에 대한 그룹핑 
     		-- id 컬럼의 값이 그대로 들어간 경우 답견글이 아니다  처음글 
+    
+  -- replaynum : 답변글에대한 넘버링  ( 1,2,3 ....)
+  -- step  :  답변글의 깊이
+  		-- 0 : 처음글 ( 자신의 글 , 답변X	)
+  		-- 1 : 답변글
+  		-- 2 : 답변의 답변
+  		-- 3 : 답변의 답변의 답변 
+    
+    
+    -- 답변글이 존재하는 테이블을 출력 할떄 , 정렬을 잘 해서 가져와야한다
+    select * from freeboard
+    order by masterid desc , replaynum asc , step asc , id asc
+    -- masterid 커럼에 중복됨 값이 있을경우 , replaynum 컴럼을 asc
+    -- replaynum 이 중복된 값이 존재 할때 step를 asc
+    -- step 이 중복된값이 존재할떄 id asc
+    
+    
+    
+    
+    
