@@ -14,5 +14,8 @@ create table freeboard (
     
     
  -- id 컬럼 : 새로운 글이 등록될떄 기존의 id컬럼의 최대값을 가져와서 +1    <= 새글 번호의 넘버링
+ 
+  -- 답변글을 처리하는 컬럼이 3개 필요하다 ( masterid , replaynum , step)
     
  -- masterid  : 글의 답변에 대한 그룹핑 
+    		-- id 컬럼의 값이 그대로 들어간 경우 답견글이 아니다  처음글 
