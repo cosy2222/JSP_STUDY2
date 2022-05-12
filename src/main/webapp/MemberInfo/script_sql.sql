@@ -1,26 +1,38 @@
--- È¸¿ø Á¤º¸¸¦ ÀúÀåÇÏ´Â Å×ÀÌºí
 
+--íšŒì› ì •ë³´ë¥¼ ì €ì¥í•˜ëŠ” í…Œì´ë¸” 
 Create table mbTbl (
-idx number not null, -- ½ÃÄö½º ºÎÂø
-id varchar2(100) not null,
-pass varchar2(100) not null,
-name varchar2(100) not null,
-email varchar2(100) not null,
-city varchar2(100) null,
-phone varchar2(100) null
-)
+    idx number not null,    -- ì‹œí€€ìŠ¤ ë¶€ì°©, ìë™ ì¦ê°€ ì»¬ëŸ¼. 
+    id varchar2(100) not null, 
+    pass varchar2(100) not null,
+    name varchar2(100) not null, 
+    email varchar2(100) not null, 
+    city varchar2(100) null, 
+    phone varchar2(100) null); 
 
-select * from mbtbl;
+select * from mbtbl 
 
-alter table mbtbl
-add constraint mbtbl_id_PK Primary key (id);
+alter table mbTbl 
+add constraint mbTbl_id_PK primary key (id); 
 
-Create sequence seq_mbTbl_idx
+Create sequence seq_mbTbl_idx 
     increment by 1
     start with 1
-    nocache;
+    nocache; 
 
---  ´õ¹Ì µ¥ÀÌÅÍ ÀÔ·Â --
+/* ë”ë¯¸ ë°ì´í„° ì…ë ¥ */ 
+insert into mbTbl ( idx, id , pass, name,  email, city, phone)
+values (seq_mbTbl_idx.nextval,'admin', '1234', 'ê´€ë¦¬ì', 'kosmo@kosmo.com', 'ì„œìš¸', '010-1111-1111');
+    
 
-insert into mbTbl (idx, id, pass, name, email, city, phone)
-values (seq_mbTbl_idx.nextval, 'admin', '1234', '°ü¸®ÀÚ', 'kosmo@kosmo.com', '¼­¿ï', '010-0000-0000');
+
+
+
+
+
+
+
+
+
+
+
+    

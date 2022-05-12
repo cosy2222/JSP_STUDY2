@@ -35,6 +35,8 @@ create table freeboard (
     -- replaynum 이 중복된 값이 존재 할때 step를 asc
     -- step 이 중복된값이 존재할떄 id asc
     
+    desc freeboard;
+    
     
     
     
