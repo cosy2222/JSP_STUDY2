@@ -99,7 +99,12 @@
 <jsp:forward page="freeboard_list.jsp"/>
 
 
+<!-- 
+	jsp:forward : 서버단에서 페이지를 이동  , 클라이언트의 기존의 url정보가 바뀌지않는다
+	response.sendRedirect : 
+		클라이언트에서 페이지를 재요청으로 페이지 이동 , 이동하는 페이지로 url정보가 바뀜 
 
+ -->
 
 
 
