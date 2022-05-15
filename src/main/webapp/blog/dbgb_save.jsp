@@ -34,9 +34,10 @@
 	}
 	
 	
-	java.util.Date yymmdd = new java.util.Date();
-	SimpleDateFormat myformat = new SimpleDateFormat("yy-mm-d h:mm a");
-	String ymd = myformat.format(yymmdd);
+	 java.util.Date yymmdd = new java.util.Date() ;
+	 SimpleDateFormat myformat = new SimpleDateFormat("yy-MM-d h:mm a");
+	 String ymd=myformat.format(yymmdd);
+
 	
 	String sql = null;
 	Statement st = null;
